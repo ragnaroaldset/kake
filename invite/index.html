@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Howdy</title>
+</head>
+<body>
+	<div class="main">
+		<div class="center">
+			<h1 class="header">17.mai 2022</h1>
+			<h2 class="header">Casa de Bjørn & Ragna</h2>
+			<div class="video-div">
+				<video width="320" height="240" controls>
+					<source src="/sample-video.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div class="comments">
+				<h3>Legg igjen en kommentar!</h3>
+				<div>
+					<label for="name">Ka hette du? </label>
+					<input type="text" id="name">
+					<label for="message">Her kan du skriv: </label>
+					<textarea type="textarea" id="message"></textarea>
+					<button onclick="setAction()">Kommenter :D</button>
+				</div>
+				<div id="comments-box">
+
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		fetchAndDisplayComments();
+	});
+	function setAction() {
+		const name = document.querySelector("#name").value;
+		const comment = document.querySelector("#message").value;
+
+		const data = JSON.stringify({
+			user: name,
+			comment
+		});
+		console.log("data: ", data);
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/comments");
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send(data);
+		window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+	}
+	function fetchAndDisplayComments() {
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "/comments");
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send();
+		xhr.addEventListener("load", onSuccess);
+	}
+	function onSuccess() {
+		const parsedComments = JSON.parse(this.responseText).reverse();
+		const target = document.querySelector ("#comments-box");
+		parsedComments.forEach(commentObj => {
+			var newContent = '<div class="comment"><p>Navn: ' + commentObj.user + '</p><br><p>Kommentar:' + commentObj.comment + '</p></div><br>';
+			target.insertAdjacentHTML('beforeend', newContent)
+		});
+
+	}
+</script>
+</body>
+<style>
+	body {
+		min-height: 100vh;
+		background-color: #FFFFFF;
+		/* background-image: linear-gradient(red, white, blue); */
+		background-image: url("/background.png");
+		background-size: cover;
+;
+	}
+	.main {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.center {
+		margin: auto;
+		width: 50%;
+		box-shadow: 10px 10px 35px -3px rgba(0,0,0,0.75);
+		-webkit-box-shadow: 10px 10px 35px -3px rgba(0,0,0,0.75);
+		-moz-box-shadow: 10px 10px 35px -3px rgba(0,0,0,0.75);
+		padding: 10px;
+		background-color: #FFFF;
+		border-radius: 10px;
+
+	}
+	.header {
+		text-align: center;
+		color: red;
+	}
+	.video-div {
+		text-align: center;
+	}
+	.comment {
+		margin: 0 auto;
+		width: 70%;
+		text-align: center;
+		box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.39);
+		-webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.39);
+		-moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.39);
+		border-radius: 10px;
+		padding: 10px;
+	}
+</style>
+</html>
