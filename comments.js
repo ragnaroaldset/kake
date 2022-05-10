@@ -2,8 +2,6 @@ const fs = require('fs-extra');
 const express = require("express");
 const router = express.Router();
 
-
-
 router.get("/comments", (req, res) => {
 	return fs.ensureFile("./comments.json")
 		.then(() => {
