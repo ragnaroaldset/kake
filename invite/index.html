@@ -31,7 +31,7 @@
 				<div class="tenor-gif-embed" data-postid="25348437" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/smiley-gif-25348437">Smiley GIF</a>from <a href="https://tenor.com/search/smiley-gifs">Smiley GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 			</div>
 			<div id="button-div">
-				<button class="timetable-button" onclick="showTimeTable()">HER E PLANA</button>
+				<button class="timetable-button" onclick="showTimeTable()">HER FINNER DU AGENDAEN!</button>
 			</div>
 			<div class="video-div">
 				<iframe width="300" src="https://www.youtube.com/embed/PA306h19uWo?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -39,10 +39,10 @@
 			<div class="comments">
 				<h3>Legg igjen en kommentar!</h3>
 				<div>
-					<label for="name">Ka hette du? </label>
-					<input type="text" id="name">
-					<label for="message">Her kan du skriv: </label>
-					<textarea type="textarea" id="message"></textarea>
+					<label for="name">Ka hette du? </label><br>
+					<input type="text" id="name"><br>
+					<label for="message">Her kan du skriv:</label><br>
+					<textarea type="textarea" id="message"></textarea><br>
 					<button onclick="setAction()">Kommenter :D</button>
 				</div>
 				<div id="comments-box"></div>
@@ -86,19 +86,20 @@
 		const newContent = `
 			<div class="timetable">
 				<div id="button-div">
-					<button class="timetable-button" onclick="hideTimetable()">FÆRDI MED PLANA</button>
+					<button class="timetable-button" onclick="hideTimetable()">Tilbake til hovedsida</button>
 				</div>
 
-				<h2>Plan for dagen:</h2>
-				<br><br>
-
-				<h3><span class="time">10:30</span> 17. mai frokost med sprudlevann</h3>
-				<br><br>
-				<h3><span class="time">13:30</span> Avreise Valle til byen</h3>
-				<br><br>
-				<h3><span class="time">14:00</span> Reservert bort på Vino bar for en flott vinopplevelse</h3>
-				<br><br>
-				<h3><span class="time">16:00</span> Flatfylla heime med Roger</h3>
+				<h2>Agenda:</h2>
+				<hr>
+				<h3><span class="time">10:30</span><br>17. mai frokost med sprudlevann</h3>
+				<hr>
+				<h3><span class="time">13:30</span><br>Avreise Valle til byen</h3>
+				<hr>
+				<h3><span class="time">14:00</span><br>Reservert bort på Vino bar for en flott vinopplevelse<br><a href="https://vinobar.no/">https://vinobar.no/</a></h3>
+				<hr>
+				<h3><span class="time">16:00</span><br>Flatfylla heime med Roger</h3>
+				<br>
+				<hr>
 			</div>`;
 		const otherContent = document.querySelector (".center");
 		console.log(otherContent);
