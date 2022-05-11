@@ -84,7 +84,23 @@
 		});
 	}
 	function showTimeTable() {
-		const newContent = '<div class="timetable"><div id="button-div"><button class="timetable-button" onclick="hideTimetable()">FÆRDI MED PLANA</button></div><h2>Plan for dagen:</h2><br><br><h3><span class="time">10:30</span> 17. mai frokost med sprudlevann</h3><br><br><h3><span class="time">13:30</span> Avreise Valle til byen</h3><br><br><h3><span class="time">14:00</span> Reservert bort på Vino bar for en flott vinopplevelse</h3><br><br><h3><span class="time">16:00</span> Flatfylla heime med Roger</h3></div>';
+		const newContent = `
+			<div class="timetable">
+				<div id="button-div">
+					<button class="timetable-button" onclick="hideTimetable()">FÆRDI MED PLANA</button>
+				</div>
+				
+				<h2>Plan for dagen:</h2>
+				<br><br>
+				
+				<h3><span class="time">10:30</span> 17. mai frokost med sprudlevann</h3>
+				<br><br>
+				<h3><span class="time">13:30</span> Avreise Valle til byen</h3>
+				<br><br>
+				<h3><span class="time">14:00</span> Reservert bort på Vino bar for en flott vinopplevelse</h3>
+				<br><br>
+				<h3><span class="time">16:00</span> Flatfylla heime med Roger</h3>
+			</div>`;
 		const otherContent = document.querySelector (".center");
 		console.log(otherContent);
 		otherContent.style.visibility = "hidden";
