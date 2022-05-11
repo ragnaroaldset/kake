@@ -17,8 +17,8 @@
 <body>
 	<div class="main">
 		<div class="center">
-			<h1 class="header">17.mai 2022</h1>
-			<h2 class="header">Casa de Bjørn & Ragna</h2>
+			<h1 class="header"><span class="red">17</span><span class="blue">.</span><span class="blue">mai</span><span class="red">2022</span></h1>
+			<h2 class="header"><span class="red">Casa </span><span class="blue">de</span> <span class="red">Bjørn</span><span class="blue"> & </span><span class="red">Ragna</span></h2>
 			<div class="emojis">
 				<img src="/smiley.gif" alt="smiley" width="10%">
 				<img src="/digilah-digifun.gif" alt="smiley" width="10%">
@@ -155,7 +155,6 @@
 	}
 	.header {
 		text-align: center;
-		color: red;
 	}
 	.video-div {
 		text-align: center;
@@ -193,12 +192,21 @@
 	.time {
 		color: red;
 	}
-	h3 {
+	h1 {
+		text-shadow: 5px 5px 20px rgb(58, 58, 58);
+	}
+	.red {
+		color: red;
+	}
+	.blue {
 		color: blue;
 	}
 	@media screen and (max-width: 800px) {
 		.center, .timetable {
-			width: 100%;
+			width: 95%;
+		}
+		.timetable {
+			position: inherit;
 		}
 	}
 </style>
