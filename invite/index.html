@@ -105,15 +105,14 @@
 			</div>`;
 		const mainContent = document.querySelector (".main");
 		mainContent.style.visibility = "hidden";
-		mainContent.style.height = "0px";
-		const target = document.querySelector (".main");
-		target.insertAdjacentHTML("beforebegin", newContent);
+		mainContent.style.height = "0vh";
+		mainContent.insertAdjacentHTML("beforebegin", newContent);
 		const timetable = document.querySelector (".timetable");
 		timetable.style.visibility = "visible";
 		timetable.style.height = "auto";
 	}
 	function hideTimetable() {
-		const mainContent = document.querySelector (".center");
+		const mainContent = document.querySelector (".main");
 		const timetable = document.querySelector (".timetable");
 		timetable.parentNode.removeChild(timetable);
 		mainContent.style.visibility = "visible";
