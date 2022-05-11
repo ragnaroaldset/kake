@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3050;
+const port = 5000;
 const path = require("path");
 const comments = require("./comments");
 const bodyParser = require("body-parser");
