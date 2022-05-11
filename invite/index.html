@@ -5,14 +5,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Howdy</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Rubik+Puddles&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="main">
 		<div class="center">
 			<h1 class="header">17.mai 2022</h1>
 			<h2 class="header">Casa de Bjørn & Ragna</h2>
+			<div class="emojis">
+				<div class="tenor-gif-embed" data-postid="25348437" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/smiley-gif-25348437">Smiley GIF</a>from <a href="https://tenor.com/search/smiley-gifs">Smiley GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="17801563" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/digilah-digifun-malaysia-largest-network-digi-emoji-mix-emoji-gif-17801563">Digilah Digifun GIF</a>from <a href="https://tenor.com/search/digilah-gifs">Digilah GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="22332733" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/love-heart-flower-hearts-rose-gif-22332733">Love Heart GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="25028570" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/lider-%C5%9Fampiyon-l1der-trabzonspor-gif-25028570">Lider şampiyon Sticker</a>from <a href="https://tenor.com/search/lider-stickers">Lider Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="14209654" data-share-method="host" data-aspect-ratio="1.29" data-width="10%"><a href="https://tenor.com/view/flag-country-symbol-animated-flag-flag-of-norway-gif-14209654">Flag Country Sticker</a>from <a href="https://tenor.com/search/flag-stickers">Flag Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="25028570" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/lider-%C5%9Fampiyon-l1der-trabzonspor-gif-25028570">Lider şampiyon Sticker</a>from <a href="https://tenor.com/search/lider-stickers">Lider Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="22332733" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/love-heart-flower-hearts-rose-gif-22332733">Love Heart GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="17801563" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/digilah-digifun-malaysia-largest-network-digi-emoji-mix-emoji-gif-17801563">Digilah Digifun GIF</a>from <a href="https://tenor.com/search/digilah-gifs">Digilah GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<div class="tenor-gif-embed" data-postid="25348437" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/smiley-gif-25348437">Smiley GIF</a>from <a href="https://tenor.com/search/smiley-gifs">Smiley GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			</div>
 			<div id="button-div">
-				<button id="timetable-button" onclick="">SHOW TIMETABLE</button>
+				<button class="timetable-button" onclick="showTimeTable()">HER E PLANA</button>
 			</div>
 			<div class="video-div">
 				<video width="320" height="240" controls>
@@ -68,6 +82,24 @@
 			var newContent = '<div class="comment"><p>Navn: ' + commentObj.user + '</p><br><p>Kommentar:' + commentObj.comment + '</p></div><br>';
 			target.insertAdjacentHTML('beforeend', newContent)
 		});
+	}
+	function showTimeTable() {
+		const newContent = '<div class="timetable"><div id="button-div"><button class="timetable-button" onclick="hideTimetable()">FÆRDI MED PLANA</button></div><h2>Plan for dagen:</h2><br><br><h3><span class="time">10:30</span> 17. mai frokost med sprudlevann</h3><br><br><h3><span class="time">13:30</span> Avreise Valle til byen</h3><br><br><h3><span class="time">14:00</span> Reservert bort på Vino bar for en flott vinopplevelse</h3><br><br><h3><span class="time">16:00</span> Flatfylla heime med Roger</h3></div>';
+		const otherContent = document.querySelector (".center");
+		console.log(otherContent);
+		otherContent.style.visibility = "hidden";
+		otherContent.style.height = "0px";
+		const target = document.querySelector (".main");
+		target.insertAdjacentHTML("beforebegin", newContent);
+	}
+	function hideTimetable() {
+		const timetable = document.querySelector (".timetable");
+		const otherContent = document.querySelector (".center");
+		console.log(otherContent);
+		otherContent.style.visibility = "visible";
+		timetable.style.visibility = "hidden";
+		timetable.style.height = "0px";
+		otherContent.style.height = "auto";
 
 	}
 </script>
@@ -79,6 +111,8 @@
 		/* background-image: linear-gradient(red, white, blue); */
 		background-image: url("/background.png");
 		background-size: cover;
+		font-family: 'Bungee Inline', cursive;
+		text-align: center;
 ;
 	}
 	.main {
@@ -87,7 +121,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.center {
+	.center, .timetable {
 		margin: auto;
 		width: 50%;
 		box-shadow: 10px 10px 35px -3px rgba(0,0,0,0.75);
@@ -120,12 +154,34 @@
 		border-radius: 10px;
 		padding: 10px;
 	}
-	#timetable-button {
-
+	.timetable-button {
+		margin: 20px;
 		padding: 20px;
 		border-radius: 10px;
 		background-image: linear-gradient(red, white, blue);
 		font-size: large;
+	}
+	.timetable {
+		margin: 0;
+		position: relative;
+		height: 100vh;
+		width: 60%;
+		left: 25% !important;
+		z-index: 1000000;
+		text-align: center;
+	}
+	.emojis {
+		display: flex;
+		justify-content: center;
+	}
+	.time {
+		color: red;
+	}
+	h3 {
+		color: blue;
+	}
+	h1, h2, h3 {
+
 	}
 </style>
 </html>

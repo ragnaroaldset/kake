@@ -11,6 +11,6 @@ app.get('/', function(req, res) {
 });
 app.use(comments);
 app.use(express.static(path.resolve(__dirname, "./resources")));
-app.listen((process.env.PORT || 5000), () => {
+app.listen((process.env.PORT || 3050), () => {
   console.log("17.mai app listening on some port");
 });
