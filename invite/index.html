@@ -92,20 +92,20 @@
 				<h2>Agenda:</h2>
 				<hr>
 				<h3><span class="time">10:30</span><br>17. mai frokost med sprudlevann</h3>
+				<p>*Vi serverer lett frokost og sprudlevann<br>Ta med ønsket drikke til flatfylla hos Roger 🍾🥂🍸</p>
 				<hr>
-				<h3><span class="time">13:30</span><br>Avreise Valle til byen</h3>
+				<h3><span class="time">13:30</span><br>Avreise Valle til byen 🛺</h3>
 				<hr>
-				<h3><span class="time">14:00</span><br>Reservert bort på Vino bar for en flott vinopplevelse<br><a href="https://vinobar.no/">https://vinobar.no/</a></h3>
+				<h3><span class="time">14:00</span><br>Reservert bort på Vino bar for en flott vinopplevelse<br><a href="https://vinobar.no/">https://vinobar.no/</a><br>🍷🍷🍷🍷🍷🍷🍷🍷🍷🍷🍷🍷🍷🍷</h3>
 				<hr>
-				<h3><span class="time">16:00</span><br>Flatfylla heime med Roger</h3>
+				<h3><span class="time">16:00</span><br>Flatfylla heime med Roger<br>🥳</h3>
 				<br>
 				<hr>
 				<img width="90%" src="https://c.tenor.com/ISaU5YdlGfsAAAAC/party-lets-party.gif" loop=infinite />
 			</div>`;
-		const otherContent = document.querySelector (".center");
-		console.log(otherContent);
-		otherContent.style.visibility = "hidden";
-		otherContent.style.height = "0px";
+		const mainContent = document.querySelector (".main");
+		mainContent.style.visibility = "hidden";
+		mainContent.style.height = "0px";
 		const target = document.querySelector (".main");
 		target.insertAdjacentHTML("beforebegin", newContent);
 		const timetable = document.querySelector (".timetable");
