@@ -20,30 +20,30 @@
 			<h1 class="header">17.mai 2022</h1>
 			<h2 class="header">Casa de Bjørn & Ragna</h2>
 			<div class="emojis">
-				<div class="tenor-gif-embed" data-postid="25348437" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/smiley-gif-25348437">Smiley GIF</a>from <a href="https://tenor.com/search/smiley-gifs">Smiley GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="17801563" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/digilah-digifun-malaysia-largest-network-digi-emoji-mix-emoji-gif-17801563">Digilah Digifun GIF</a>from <a href="https://tenor.com/search/digilah-gifs">Digilah GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="22332733" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/love-heart-flower-hearts-rose-gif-22332733">Love Heart GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="25028570" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/lider-%C5%9Fampiyon-l1der-trabzonspor-gif-25028570">Lider şampiyon Sticker</a>from <a href="https://tenor.com/search/lider-stickers">Lider Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="14209654" data-share-method="host" data-aspect-ratio="1.29" data-width="10%"><a href="https://tenor.com/view/flag-country-symbol-animated-flag-flag-of-norway-gif-14209654">Flag Country Sticker</a>from <a href="https://tenor.com/search/flag-stickers">Flag Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="25028570" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/lider-%C5%9Fampiyon-l1der-trabzonspor-gif-25028570">Lider şampiyon Sticker</a>from <a href="https://tenor.com/search/lider-stickers">Lider Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="22332733" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/love-heart-flower-hearts-rose-gif-22332733">Love Heart GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="17801563" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/digilah-digifun-malaysia-largest-network-digi-emoji-mix-emoji-gif-17801563">Digilah Digifun GIF</a>from <a href="https://tenor.com/search/digilah-gifs">Digilah GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-				<div class="tenor-gif-embed" data-postid="25348437" data-share-method="host" data-aspect-ratio="1" data-width="10%"><a href="https://tenor.com/view/smiley-gif-25348437">Smiley GIF</a>from <a href="https://tenor.com/search/smiley-gifs">Smiley GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+				<img src="/smiley.gif" alt="smiley" width="10%">
+				<img src="/digilah-digifun.gif" alt="smiley" width="10%">
+				<img src="/love-heart.gif" alt="smiley" width="10%">
+				<img src="/lider-şampiyon.gif" alt="smiley" width="10%">
+				<img src="/flag-country.gif" alt="flag" width="10%">
+				<img src="/lider-şampiyon.gif" alt="smiley" width="10%">
+				<img src="/love-heart.gif" alt="smiley" width="10%">
+				<img src="/digilah-digifun.gif" alt="smiley" width="10%">
+				<img src="/smiley.gif" alt="smiley" width="10%">
 			</div>
 			<div id="button-div">
 				<button class="timetable-button" onclick="showTimeTable()">HER FINNER DU AGENDAEN!</button>
 			</div>
 			<div class="video-div">
-				<iframe width="300" src="https://www.youtube.com/embed/PA306h19uWo?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="300" src="https://www.youtube.com/embed/PA306h19uWo?start=15&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<div class="comments">
 				<h3>Legg igjen en kommentar!</h3>
 				<div>
-					<label for="name">Ka hette du? </label><br>
+					<label for="name">Navn</label>
 					<input type="text" id="name"><br>
-					<label for="message">Her kan du skriv:</label><br>
-					<textarea type="textarea" id="message"></textarea><br>
-					<button onclick="setAction()">Kommenter :D</button>
+					<label for="message">Kommentar</label><br>
+					<textarea type="textarea" id="message" rows="5" cols="50"></textarea><br>
+					<button onclick="setAction()">Send</button>
 				</div>
 				<div id="comments-box"></div>
 			</div>
@@ -100,6 +100,7 @@
 				<h3><span class="time">16:00</span><br>Flatfylla heime med Roger</h3>
 				<br>
 				<hr>
+				<img width="90%" src="https://c.tenor.com/ISaU5YdlGfsAAAAC/party-lets-party.gif" loop=infinite />
 			</div>`;
 		const otherContent = document.querySelector (".center");
 		console.log(otherContent);
