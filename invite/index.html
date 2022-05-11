@@ -34,10 +34,7 @@
 				<button class="timetable-button" onclick="showTimeTable()">HER E PLANA</button>
 			</div>
 			<div class="video-div">
-				<video width="320" height="240" controls>
-					<source src="/sample-video.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
+				<iframe width="300" src="https://www.youtube.com/embed/PA306h19uWo?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<div class="comments">
 				<h3>Legg igjen en kommentar!</h3>
@@ -48,9 +45,7 @@
 					<textarea type="textarea" id="message"></textarea>
 					<button onclick="setAction()">Kommenter :D</button>
 				</div>
-				<div id="comments-box">
-
-				</div>
+				<div id="comments-box"></div>
 			</div>
 		</div>
 	</div>
@@ -66,7 +61,6 @@
 			user: name,
 			comment
 		});
-		console.log("data: ", data);
 		var xhr = new XMLHttpRequest();
 		xhr.open("POST", "/comments");
 		xhr.setRequestHeader('Content-Type', 'application/json');
@@ -94,10 +88,10 @@
 				<div id="button-div">
 					<button class="timetable-button" onclick="hideTimetable()">FÆRDI MED PLANA</button>
 				</div>
-				
+
 				<h2>Plan for dagen:</h2>
 				<br><br>
-				
+
 				<h3><span class="time">10:30</span> 17. mai frokost med sprudlevann</h3>
 				<br><br>
 				<h3><span class="time">13:30</span> Avreise Valle til byen</h3>
@@ -112,16 +106,16 @@
 		otherContent.style.height = "0px";
 		const target = document.querySelector (".main");
 		target.insertAdjacentHTML("beforebegin", newContent);
+		const timetable = document.querySelector (".timetable");
+		timetable.style.visibility = "visible";
+		timetable.style.height = "auto";
 	}
 	function hideTimetable() {
+		const mainContent = document.querySelector (".center");
 		const timetable = document.querySelector (".timetable");
-		const otherContent = document.querySelector (".center");
-		console.log(otherContent);
-		otherContent.style.visibility = "visible";
-		timetable.style.visibility = "hidden";
-		timetable.style.height = "0px";
-		otherContent.style.height = "auto";
-
+		timetable.parentNode.removeChild(timetable);
+		mainContent.style.visibility = "visible";
+		mainContent.style.height = "auto";
 	}
 </script>
 </body>
@@ -129,7 +123,6 @@
 	body {
 		min-height: 100vh;
 		background-color: #FFFFFF;
-		/* background-image: linear-gradient(red, white, blue); */
 		background-image: url("/background.png");
 		background-size: cover;
 		font-family: 'Bungee Inline', cursive;
@@ -201,8 +194,10 @@
 	h3 {
 		color: blue;
 	}
-	h1, h2, h3 {
-
+	@media screen and (max-width: 800px) {
+		.center, .timetable {
+			width: 100%;
+		}
 	}
 </style>
 </html>
