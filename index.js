@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 5000;
 const path = require("path");
 const comments = require("./comments");
 const bodyParser = require("body-parser");
@@ -12,6 +11,6 @@ app.get('/', function(req, res) {
 });
 app.use(comments);
 app.use(express.static(path.resolve(__dirname, "./resources")));
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen((process.env.PORT || 5000), () => {
+  console.log("17.mai app listening on some port");
 });
