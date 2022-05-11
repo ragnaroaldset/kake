@@ -11,6 +11,9 @@
 		<div class="center">
 			<h1 class="header">17.mai 2022</h1>
 			<h2 class="header">Casa de Bjørn & Ragna</h2>
+			<div id="button-div">
+				<button id="timetable-button" onclick="">SHOW TIMETABLE</button>
+			</div>
 			<div class="video-div">
 				<video width="320" height="240" controls>
 					<source src="/sample-video.mp4" type="video/mp4">
@@ -95,6 +98,11 @@
 		border-radius: 10px;
 
 	}
+	#button-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.header {
 		text-align: center;
 		color: red;
@@ -111,6 +119,13 @@
 		-moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.39);
 		border-radius: 10px;
 		padding: 10px;
+	}
+	#timetable-button {
+
+		padding: 20px;
+		border-radius: 10px;
+		background-image: linear-gradient(red, white, blue);
+		font-size: large;
 	}
 </style>
 </html>
